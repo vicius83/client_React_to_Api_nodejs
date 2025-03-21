@@ -9,7 +9,7 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:5000/auth/register', { username, password, 'role':'user' });
+      await axios.post('https://api-auth-node-express.onrender.com/auth/register', { username, password, 'role':'user' });
       setMessage('Registration successful!');
     } catch (error) {
       setMessage('Registration failed: ' + error);

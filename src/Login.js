@@ -9,7 +9,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', { username, password });
+      const response = await axios.post('https://api-auth-node-express.onrender.com/auth/login', { username, password });
       localStorage.setItem('token', response.data.token);
       setMessage('Login successful!');
     } catch (error) {
